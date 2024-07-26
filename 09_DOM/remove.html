@@ -1,0 +1,49 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Element</title>
+</head>
+<body>
+    <div id="container">
+        <p id="paragraph">This is a paragraph that will be removed.</p>
+    </div>
+    <button onclick="removeElement()">Remove Paragraph</button>
+
+    <script>
+        function removeElement() {
+            // Select the element by its ID
+            var element = document.getElementById("paragraph");
+            // Remove the element from the DOM
+            element.remove();
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Last Child</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="removeLastChild()">Remove Last Item</button>
+
+    <script>
+        function removeLastChild() {
+            // Select the element by its ID
+            var ul = document.getElementById("myList");
+            // Check if the element has any children
+            if (ul.lastElementChild) {
+                // Remove the last child element
+                ul.removeChild(ul.lastElementChild);
+            }
+        }
+    </script>
+</body>
+</html>

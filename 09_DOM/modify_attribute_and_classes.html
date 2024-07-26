@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image Source</title>
+</head>
+<body>
+    <img id="myImage" src="oldImage.jpg" alt="Old Image" width="300">
+    <button onclick="changeImageSource()">Change Image</button>
+
+    <script>
+        function changeImageSource() {
+            // Select the image element by its ID
+            var img = document.getElementById("myImage");
+            // Change the src attribute of the image element
+            img.setAttribute("src", "newImage.jpg");
+            // Optionally, change the alt attribute of the image element
+            img.setAttribute("alt", "New Image");
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add and Remove CSS Class</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p id="myParagraph">This is a paragraph that will be highlighted.</p>
+    <button onclick="addHighlight()">Add Highlight</button>
+    <button onclick="removeHighlight()">Remove Highlight</button>
+
+    <script>
+        function addHighlight() {
+            // Select the element by its ID
+            var element = document.getElementById("myParagraph");
+            // Add the 'highlight' class to the element
+            element.classList.add("highlight");
+        }
+
+        function removeHighlight() {
+            // Select the element by its ID
+            var element = document.getElementById("myParagraph");
+            // Remove the 'highlight' class from the element
+            element.classList.remove("highlight");
+        }
+    </script>
+</body>
+</html>
