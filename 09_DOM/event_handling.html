@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Change Paragraph Text</title>
+</head>
+<body>
+    <p id="myParagraph">This is the original text.</p>
+    <button id="myButton">Change Text</button>
+
+    <script>
+        // Select the button by its ID
+        var button = document.getElementById("myButton");
+        // Add a click event listener to the button
+        button.addEventListener("click", function() {
+            // Select the paragraph by its ID
+            var paragraph = document.getElementById("myParagraph");
+            // Change the text content of the paragraph
+            paragraph.textContent = "This is the new text.";
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Border Color on Mouseover</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            margin: 20px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myBox" class="box">Hover over me!</div>
+
+    <script>
+        // Select the element by its ID
+        var box = document.getElementById("myBox");
+        
+        // Add a mouseover event listener to the element
+        box.addEventListener("mouseover", function() {
+            // Change the border color of the element
+            box.style.borderColor = "red";
+        });
+
+        // Optionally, add a mouseout event listener to revert the border color
+        box.addEventListener("mouseout", function() {
+            // Revert the border color of the element
+            box.style.borderColor = "black";
+        });
+    </script>
+</body>
+</html>
+
