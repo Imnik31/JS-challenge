@@ -1,0 +1,53 @@
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Key Press</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <script >
+
+
+        // Select the input field element
+const inputField = document.getElementById('myInput');
+
+// Add a keydown event listener to the input field
+inputField.addEventListener('keydown', (event) => {
+    // Log the key press to the console
+    console.log(`Key pressed: ${event.key}`);
+});
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Input Value</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="Type something...">
+    <p id="displayParagraph">Current value: </p>
+    <script >
+
+        // Select the input field and the paragraph elements
+const inputField = document.getElementById('myInput');
+const displayParagraph = document.getElementById('displayParagraph');
+
+// Add a keyup event listener to the input field
+inputField.addEventListener('keyup', () => {
+    // Update the paragraph with the current value of the input field
+    displayParagraph.textContent = `Current value: ${inputField.value}`;
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation Example</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <script >
+
+        // Select the list element
+const list = document.getElementById('myList');
+
+// Add a click event listener to the list using event delegation
+list.addEventListener('click', (event) => {
+    // Check if the clicked element is a list item
+    if (event.target && event.target.nodeName === 'LI') {
+        // Log the text content of the clicked list item
+        console.log(`Clicked item: ${event.target.textContent}`);
+    }
+});
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Event Delegation</title>
+</head>
+<body>
+    <div id="parent">
+        <button id="addItemButton">Add Item</button>
+    </div>
+    <script >
+
+        // Select the parent element and the button to add items
+const parentElement = document.getElementById('parent');
+const addItemButton = document.getElementById('addItemButton');
+
+// Function to add a new item to the parent element
+const addItem = () => {
+    const newItem = document.createElement('div');
+    newItem.textContent = 'New Item';
+    newItem.className = 'child';
+    parentElement.appendChild(newItem);
+};
+
+// Add a click event listener to the button to add items
+addItemButton.addEventListener('click', addItem);
+
+// Add a click event listener to the parent element using event delegation
+parentElement.addEventListener('click', (event) => {
+    // Check if the clicked element is a dynamically added child element
+    if (event.target && event.target.classList.contains('child')) {
+        // Log the text content of the clicked child element
+        console.log(`Clicked item: ${event.target.textContent}`);
+    }
+});
+
+    </script>
+</body>
+</html>

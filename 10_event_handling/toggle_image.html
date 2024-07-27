@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image Visibility</title>
+    <style>
+        #myImage {
+            display: block; /* Ensure the image is initially visible */
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="./img/IMG_20211103_114331.jpg" alt="My Image" width="300">
+    <script >
+
+        // Select the image element
+const image = document.getElementById('myImage');
+
+// Add a double-click event listener to the image
+image.addEventListener('dblclick', () => {
+    // Toggle the visibility of the image
+    if (image.style.display === 'none') {
+        image.style.display = 'block';
+    } else {
+        image.style.display = 'none';
+    }
+});
+
+    </script>
+</body>
+</html>

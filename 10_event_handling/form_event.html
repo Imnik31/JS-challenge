@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Form Data</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+
+        // Select the form element
+const form = document.getElementById('myForm');
+
+// Add a submit event listener to the form
+form.addEventListener('submit', (event) => {
+    // Prevent the default form submission
+    event.preventDefault();
+    
+    // Create a FormData object from the form
+    const formData = new FormData(form);
+    
+    // Log the form data to the console
+    formData.forEach((value, key) => {
+        console.log(`${key}: ${value}`);
+    });
+});
+
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Selected Value</title>
+</head>
+<body>
+    <label for="mySelect">Choose an option:</label>
+    <select id="mySelect">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="displayParagraph">Selected value: </p>
+    <script >
+
+
+        // Select the dropdown and the paragraph elements
+const selectDropdown = document.getElementById('mySelect');
+const displayParagraph = document.getElementById('displayParagraph');
+
+// Add a change event listener to the select dropdown
+selectDropdown.addEventListener('change', () => {
+    // Update the paragraph with the selected value of the dropdown
+    displayParagraph.textContent = `Selected value: ${selectDropdown.value}`;
+});
+
+    </script>
+</body>
+</html>
+

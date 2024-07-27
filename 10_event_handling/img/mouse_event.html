@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="name">nikhil</p>
+    </div>
+</body>
+<script>
+
+    let chanecolour=document.getElementById("name")
+    chanecolour.addEventListener("mouseover", ()=>{
+        chanecolour.style.backgroundColor="blue"
+    })
+    let removecolour=document.getElementById("name")
+    removecolour.addEventListener("mouseout", ()=>{
+        removecolour.style.backgroundColor=""
+    })
+</script>
+</html>
