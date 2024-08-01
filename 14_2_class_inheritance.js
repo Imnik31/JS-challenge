@@ -30,6 +30,8 @@
 
 // // Log the student ID
 // console.log(studentInstance.getStudentId());
+
+
 class Person {
     constructor(name, age) {
         this.name = name;
